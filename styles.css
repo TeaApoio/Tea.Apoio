@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white; /* Fundo branco */
+    margin: 0;
+    padding: 20px;
+    color: black;
+}
+
+header {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 100%; /* Ajusta a logo para caber na tela */
+    height: auto; /* Mantém a proporção */
+}
+
+main {
+    margin: 20px 0;
+}
+
+.slider {
+    position: relative;
+    margin: 20px auto;
+    max-width: 600px;
+    overflow: hidden; /* Evita que imagens excedam o contêiner */
+}
+
+.slider img {
+    width: 100%; /* As imagens ocuparão toda a largura do contêiner */
+    display: none; /* Oculta todas as imagens inicialmente */
+}
+
+.slider img:first-child {
+    display: block; /* Exibe a primeira imagem */
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev, .next {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 200px; /* Distância maior abaixo das miniaturas */
+}
+
+.thumbnail {
+    width: 60px; /* Largura dos quadradinhos */
+    height: 60px; /* Altura dos quadradinhos */
+    margin: 0 5px; /* Margem entre os quadrados */
+    cursor: pointer;
+    border: 2px solid transparent; /* Borda padrão */
+    transition: border 0.3s; /* Transição suave */
+}
+
+.thumbnail:hover {
+    border: 2px solid blue; /* Borda ao passar o mouse */
+}
+
+.highlight-section {
+    position: relative;
+    margin: 20px auto;
+    width: 500px; /* Aumentado a largura do quadrado */
+    height: 400px; /* Aumentado a altura do quadrado */
+    background-image: url('foto1/fundo.jpeg'); /* Adicione o caminho para sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a seção */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    display: flex; /* Para usar flexbox */
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 10px; /* Borda arredondada */
+    padding: 20px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com opacidade para melhor contraste */
+}
+
+.highlight-content {
+    display: flex;
+    flex-direction: column; /* Alinha o texto e o botão verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.main-title {
+    font-size: 26px; /* Tamanho do título */
+    margin: 10px 0; /* Espaçamento acima e abaixo */
+    font-weight: bold; /* Negrito */
+    color: #FFD700; /* Cor dourada para destaque */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
+}
+
+.sub-title {
+    font-size: 22px; /* Tamanho do subtítulo */
+    margin: 5px 0; /* Espaçamento acima e abaixo */
+    font-weight: bold; /* Destaca o subtítulo */
+    color: #ADFF2F; /* Cor verde limão para destaque */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto */
+}
+
+.support-button {
+    padding: 10px 20px;
+    background-color: blue; /* Cor azul para o botão */
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    width: 90%; /* Botão ocupará 90% da largura da tela */
+    display: inline-block; /* Para garantir que o botão seja tratado como um bloco */
+    text-align: center; /* Centraliza o texto no botão */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+.support-button:hover {
+    background-color: darkblue; /* Cor ao passar o mouse */
+}
+
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: blue; /* Fundo azul sólido para o rodapé */
+    color: white;
+    border-radius: 8px;
+    text-align: center; /* Centraliza o texto do rodapé */
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    header {
+        padding: 5px; /* Reduz o padding no cabeçalho */
+    }
+
+    .highlight-section {
+        width: 90%; /* Ajusta a largura para caber melhor em telas pequenas */
+        height: auto; /* Deixa a altura automática */
+    }
+
+    .support-button {
+        font-size: 12px; /* Tamanho de fonte menor em telas pequenas */
+    }
+
+    .slider {
+        max-width: 100%; /* Faz a slider ocupar toda a largura da tela em dispositivos pequenos */
+    }
+
+    footer {
+        font-size: 12px; /* Tamanho de fonte menor no rodapé */
+    }
+}

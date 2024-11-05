@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Seu Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="foto1/logo.jpeg" alt="Logo" class="logo">
+    </header>
+    <main>
+        <div class="slider">
+            <img src="foto1/quem somos.jpeg" alt="Imagem 1">
+            <img src="foto1/objetivos.jpeg" alt="Imagem 2">
+            <img src="foto1/convite.jpeg" alt="Imagem 3">
+            <div class="buttons">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+        <div class="thumbnail-container">
+            <img src="foto1/quem somos.jpeg" alt="Thumbnail 1" class="thumbnail" onclick="setSlide(0)">
+            <img src="foto1/objetivos.jpeg" alt="Thumbnail 2" class="thumbnail" onclick="setSlide(1)">
+            <img src="foto1/convite.jpeg" alt="Thumbnail 3" class="thumbnail" onclick="setSlide(2)">
+        </div>
+        <div class="highlight-section">
+            <div class="highlight-content">
+                <h1 class="main-title">VAMOS ABRAÇAR ESSA CAUSA JUNTOS!</h1>
+                <h2 class="sub-title">BAURU MAIS EXCLUSIVA!</h2>
+                <a href="https://forms.gle/DyTkZemBoUmvjG827" class="support-button">SEJA UM APOIADOR</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Seu Site. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
